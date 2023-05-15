@@ -1,9 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        for(int i = 1; i<=100; i++){
-            
+        int countOfMatches = 0;
+        int sumOfMatches = 0;
+
+        for (int loopNumber = 1; loopNumber <= 100; loopNumber++) {
+            if ((loopNumber % 3 == 0) && (loopNumber % 5 == 0)) {
+                countOfMatches++;
+                sumOfMatches += loopNumber;
+                System.out.println("Found a match =" + loopNumber);
+            }
+            if (countOfMatches == 5) {
+                break;
+            }
         }
+        System.out.println("Sum = " + sumOfMatches);
     }
 }
 
